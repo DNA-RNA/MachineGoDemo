@@ -1,4 +1,5 @@
-﻿using MachineGoDemo.Entities.Concrete;
+﻿using Entities.Concrete;
+using MachineGoDemo.Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,7 @@ namespace DataAccess.Abstract
 {
     public interface IMachineDal : IEntityRepository<Machine>
     {
-    
+        List<MachineDetailDto> GetMachineDetails();
+
     }
 }

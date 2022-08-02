@@ -17,6 +17,8 @@ namespace DataAccess.Concrete.EntityFramework
        public DbSet<Machine> machines { get; set; }
         public DbSet<Company> Companies { get; set; }
         public DbSet<Brand> Brands { get; set; }
+        public DbSet<Category> Categories { get; set; }
+
 
     }
 }
