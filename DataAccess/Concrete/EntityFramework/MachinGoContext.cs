@@ -1,4 +1,5 @@
-﻿using MachineGoDemo.Entities.Concrete;
+﻿using Entities.Entities.Concrete;
+using MachineGoDemo.Entities.Concrete;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,7 @@ namespace DataAccess.Concrete.EntityFramework
         public DbSet<Company> Companies { get; set; }
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<MachineType> MachineTypes { get; set; }
 
 
     }

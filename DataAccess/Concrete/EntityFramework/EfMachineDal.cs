@@ -20,9 +20,17 @@ namespace DataAccess.Concrete.EntityFramework
                              on p.CategoryId equals c.CategoryId
                              join b in context.Brands 
                              on p.BrandId equals b.BrandId
+                             join t in context.MachineTypes
+                             on p.TypeId equals t.TypeId
+                         
                              select new MachineDetailDto
                              {
-                                
+                                 MachineId = p.MachineId,
+                                 CategoryName  = c.CategoryName,
+                                 BrandName = b.BrandName,
+                                 TypeName = t.TypeName,
+                                 Model = p.Model,
+                                 ModelYear = p.ModelYear
                              };
 
                 return result.ToList();
