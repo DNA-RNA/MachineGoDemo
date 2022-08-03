@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess.Abstract
+namespace Business.Abstract
 {
-    public interface ICompanyDal : IEntityRepository<Company>
+    public interface IBrandService : IServices<Brand>
     {
     
     }
