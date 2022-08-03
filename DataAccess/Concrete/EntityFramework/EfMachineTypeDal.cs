@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfMachineType : EfEntityRepositoryBase<MachineType, MachinGoContext>, IMachineTypeDal
+    public class EfMachineTypeDal : EfEntityRepositoryBase<MachineType, MachinGoContext>, IMachineTypeDal
     {
     }
 }
