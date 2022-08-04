@@ -39,7 +39,7 @@ namespace Business.Concrete
 
         public IDataResult<Company> GetById(int id)
         {
-            return new SuccessDataResult<Company>(_companyDal.Get(c => c.CompanyId == id));
+            return new SuccessDataResult<Company>(_companyDal.Get(c => c.Id == id));
         }
 
         public IResult Update(Company entity)

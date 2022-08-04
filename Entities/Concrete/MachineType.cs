@@ -9,7 +9,7 @@ namespace Entities.Entities.Concrete
 {
     public class MachineType : IEntity
     {
-        public int TypeId { get; set; }
+        public int Id { get; set; }
         public string TypeName { get; set; }
     }
 }

@@ -37,7 +37,7 @@ namespace Business.Concrete
 
         public IDataResult<MachineType> GetById(int id)
         {
-            return new SuccessDataResult<MachineType>(_machineTypeDal.Get(m => m.TypeId == id));
+            return new SuccessDataResult<MachineType>(_machineTypeDal.Get(m => m.Id == id));
         }
 
         public IResult Update(MachineType entity)

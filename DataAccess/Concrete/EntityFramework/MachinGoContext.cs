@@ -1,5 +1,6 @@
 ﻿using Entities.Entities.Concrete;
 using MachineGoDemo.Entities.Concrete;
+using Microsoft.Azure.DevOps.Licensing.WebApi;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -14,8 +15,15 @@ namespace DataAccess.Concrete.EntityFramework
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=MachineGo;Trusted_Connection=true");
+            
         }
-       public DbSet<Machine> machines { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(Machine).Assembly);
+           // modelBuilder.Entity<MachineType>().HasKey(x => x.Id);
+        }
+
+        public DbSet<Machine> machines { get; set; }
         public DbSet<Company> Companies { get; set; }
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Category> Categories { get; set; }

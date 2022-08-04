@@ -9,7 +9,7 @@ namespace Entities.Concrete
 {
     public class MachineDetailDto : IDto
     {
-        public int MachineId { get; set; }
+        public int Id { get; set; }
         public string CategoryName { get; set; }
         public string  BrandName { get; set; }
         public string  TypeName { get; set; }

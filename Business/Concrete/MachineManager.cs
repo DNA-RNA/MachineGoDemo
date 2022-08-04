@@ -40,7 +40,7 @@ namespace Business.Concrete
 
         public IDataResult<Machine> GetById(int id)
         {
-            return new SuccessDataResult<Machine>(_machineDal.Get(m => m.MachineId == id));
+            return new SuccessDataResult<Machine>(_machineDal.Get(m => m.Id == id));
         }
 
         public IDataResult<List<MachineDetailDto>> GetMachineDetails()

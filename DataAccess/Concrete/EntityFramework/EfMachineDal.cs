@@ -17,15 +17,15 @@ namespace DataAccess.Concrete.EntityFramework
             {
                 var result = from p in context.machines
                              join c in context.Categories
-                             on p.CategoryId equals c.CategoryId
+                             on p.CategoryId equals c.Id
                              join b in context.Brands 
-                             on p.BrandId equals b.BrandId
+                             on p.BrandId equals b.Id
                              join t in context.MachineTypes
-                             on p.TypeId equals t.TypeId
+                             on p.TypeId equals t.Id
                          
                              select new MachineDetailDto
                              {
-                                 MachineId = p.MachineId,
+                                 Id = p.Id,
                                  CategoryName  = c.CategoryName,
                                  BrandName = b.BrandName,
                                  TypeName = t.TypeName,

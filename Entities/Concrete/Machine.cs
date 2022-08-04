@@ -9,7 +9,7 @@ namespace MachineGoDemo.Entities.Concrete
 {
     public class Machine : IEntity
     {
-        public int MachineId { get; set; }
+        public int Id { get; set; }
         public int CategoryId { get; set; }
         public int BrandId { get; set; }
         public int TypeId { get; set; }
