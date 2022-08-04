@@ -35,6 +35,8 @@
                 //instance oluşturur
                 services.AddSingleton<IMachineService, MachineManager>();
                 services.AddSingleton<IMachineDal, EfMachineDal>();
+                services.AddEndpointsApiExplorer();
+                services.AddSwaggerGen();
             }
 
             // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,6 +45,8 @@
                 if (env.IsDevelopment())
                 {
                     app.UseDeveloperExceptionPage();
+                    app.UseSwagger();
+                    app.UseSwaggerUI();
                 }
 
                 app.UseHttpsRedirection();
