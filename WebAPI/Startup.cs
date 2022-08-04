@@ -32,8 +32,7 @@
             public void ConfigureServices(IServiceCollection services)
             {
                 services.AddControllers();
-                //Tüm bellekte bir tane productmanager oluþturup herkese ayný referansý verir.
-                //Ýçerisnde data tutmuyorsak kullanýrýz.
+                //instance oluşturur
                 services.AddSingleton<IMachineService, MachineManager>();
                 services.AddSingleton<IMachineDal, EfMachineDal>();
             }

@@ -40,7 +40,6 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("add")]
-        //Data ekleme
         public IActionResult Add(Machine machine)
         {
             var result = _machineService.Add(machine);
@@ -50,6 +49,28 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result);
         }
+        [HttpPut("update")]
+        public IActionResult Update(Machine machine)
+        {
+            var result = _machineService.Update(machine);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+        [HttpDelete("delete")]
+        public IActionResult Delete(Machine machine)
+        {
+            var result = _machineService.Delete(machine);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        //makine listele kismi icin
         [HttpGet("getmachinedetail")]
         public IActionResult GetMachineDetails()
         {
