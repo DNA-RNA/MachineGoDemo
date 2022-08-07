@@ -1,4 +1,5 @@
-﻿using Entities.Entities.Concrete;
+﻿using Entities.Concrete;
+using Entities.Entities.Concrete;
 using MachineGoDemo.Entities.Concrete;
 using Microsoft.Azure.DevOps.Licensing.WebApi;
 using Microsoft.EntityFrameworkCore;
@@ -28,6 +29,7 @@ namespace DataAccess.Concrete.EntityFramework
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<MachineType> MachineTypes { get; set; }
+        public DbSet<Attachment> Attachments { get; set; }
 
 
     }
