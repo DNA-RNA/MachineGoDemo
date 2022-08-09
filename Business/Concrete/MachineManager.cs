@@ -1,5 +1,4 @@
 ﻿using Business.Abstract;
-using Core.CrossCuttingConcerns.Validation;
 using Core.Utilities;
 using DataAccess.Abstract;
 using Entities.Concrete;

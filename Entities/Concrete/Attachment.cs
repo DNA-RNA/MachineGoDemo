@@ -10,6 +10,8 @@ namespace Entities.Concrete
     public class Attachment : IEntity
     {
         public int Id { get; set; }
+        public int MachineId { get; set; }
         public string AttachmentName { get; set; }
+
     }
 }
